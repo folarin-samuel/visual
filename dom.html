@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>Dom</title>
+  <style>
+  .subscribe {
+    border: none;
+    background: black;
+    color: white;
+    padding: 10px 15px 10px 15px;
+    font-weight: bold;
+    border-radius: 50px;
+    cursor: pointer;
+    margin-bottom: 30px;
+  }
+  .is-subscribed {
+    background: rgb(240,240,240);
+    color: white;
+  }
+  body {
+    font-family: Arial;
+  }
+  .cost-input {
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+  }
+  .cal-button {
+    background: green;
+    color: white;
+    padding: 12px 15px;
+    border: none;
+    font-size: 15px;
+  }
+  </style>
+</head>
+<body>
+  <button onclick="changeButton()" class="button subscribe">Subscribe</button>
+  <p>Amazon Shipping Calculator</p>
+  <p>Orders under $40 = +$10 shipping</p>
+  <p>Orders over $40 = FREE shipping</p>
+  <input placeholder="Cost of order" class="cost cost-input" onkeydown="
+    console.log(event.key);
+    ">
+  <button onclick="costOf()" class="cal-button">Calculate</button>
+  <p class="output"></p>
+  <script src="script/dom.js"></script>
+</body>
+</html>
